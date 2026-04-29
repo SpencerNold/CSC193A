@@ -2,16 +2,35 @@
 <html>
 	<head>
 		<title>Fancify Shamcify</title>
-
-		<!-- link to your script file here -->
-		
+		<!-- Just saying, I think it's better practice to have this in the bottom of the body tag to ensure that the HTML body loads before the script runs... -->
+		<script src="fancifymytext.js"></script>
 	</head>
 
 	<body>
 		<h1>Fancify my Text</h1>
-		
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id="input-area" rows="4" cols="30"></textarea>
+		</fieldset>
 
-		<!-- Your UI controls go here -->
-		
+		<fieldset>
+			<legend>Fancify</legend>
+
+			<button onclick="setToBiggerSize()">Bigger!</button>
+
+			<br>
+
+			<input type="radio" id="fancy" name="style" onchange="updateTextStyle()">
+			<label for="fancy">FancyShmancy</label>
+
+			<br>
+
+			<input type="radio" id="boring" name="style" onchange="updateTextStyle()">
+			<label for="boring">BoringBetty</label>
+
+			<br>
+
+			<button onclick="moo()">Moo</button>
+		</fieldset>
 	</body>
 </html>
